@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.stage {
+    height: 615px;
+    background-color: lightcyan;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+}
+
+@keyframes ping-pong {
+    from {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        left: 300px;
+        top: 510px;
+        background-color: red;
+    }
+
+    50% {
+        left: 600px;
+        top: 0px;
+        background-color: tomato;
+    }
+
+    75% {
+        left: 900px;
+        top: 510px;
+        background-color: pink;
+    }
+
+    to {
+        left: 1200px;
+        top: 0px;
+        background-color: yellow;
+    }
+}
+
+.stage:hover .ball {
+    animation: ping-pong 4s ease 1s infinite alternate;
+}
